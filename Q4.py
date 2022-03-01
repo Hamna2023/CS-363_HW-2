@@ -8,7 +8,7 @@ import random
   
   
 # Distribution graph for Erdos_Renyi model
-def distribution_graph(g):
+#def distribution_graph(g):
     #print(nx.degree(g))
     
   
@@ -23,7 +23,11 @@ def distribution_graph(g):
     # plt.ylabel("No. of nodes")
     # plt.title("Degree distribution")
     # plt.show()
-  
+
+
+    # Display connection between nodes    
+    #distribution_graph(g)
+    
 def graph():
 
     # Take N number of nodes from user
@@ -44,8 +48,9 @@ def graph():
     g.add_nodes_from(range(1, N + 1))
 
     # run each iteration for atleast 30 times
-    av_list=[]
-    for count in range(31):
+    av_list=[] 
+    cc_list=[] 
+    for count in range(30):
 
         # Add edges to the graph randomly.
         for i in g.nodes():
@@ -62,13 +67,12 @@ def graph():
         all_node_degree = list(dict((nx.degree(g))).values())
         average=sum(all_node_degree)/N
         av_list.append(average)
-
+        cc_list.append(nx.average_clustering(g))
+    print("Average Clustering Coefficent: ",sum(cc_list)/30)
     print("Average degree of network: ",sum(av_list)/30)
     # Display the social network 
     nx.draw(g, pos, with_labels=1)
     plt.show()
 graph()
-        
-  
-# Display connection between nodes    
-#distribution_graph(g)
+    
+
