@@ -6,6 +6,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import random
+import math
   
   
 # Distribution graph for Erdos_Renyi model
@@ -71,6 +72,7 @@ def graph():
         cc_list.append(nx.average_clustering(g))
     print("Average Clustering Coefficent: ",sum(cc_list)/30)
     print("Average degree of network: ",sum(av_list)/30)
+    print("The average path length: ", (math.log(N)/math.log(sum(av_list)/30)))
     # Display the social network 
     nx.draw(g, pos, with_labels=1)
     plt.show()
