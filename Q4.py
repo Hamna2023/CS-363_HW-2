@@ -54,5 +54,7 @@ def graph():
 
 graph()
    
-
+###References:
+###https://www.geeksforgeeks.org/implementation-of-erdos-renyi-model-on-social-networks/ 
+###https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.cluster.average_clustering.html
 
