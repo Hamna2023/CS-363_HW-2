@@ -1,4 +1,5 @@
 # Implementation of Erdos-Renyi Model on a Social Network
+
   
   
 # Import Required modules
@@ -74,5 +75,8 @@ def graph():
     nx.draw(g, pos, with_labels=1)
     plt.show()
 graph()
-    
 
+
+###References:
+###https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.cluster.average_clustering.html
+###https://www.geeksforgeeks.org/implementation-of-erdos-renyi-model-on-social-networks/ 
